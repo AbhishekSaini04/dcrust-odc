@@ -26,7 +26,7 @@ const Hero = () => {
           </p>
            <Logo/>
          <StatsSection/>
-          
+           
         </div>
       </div>
 

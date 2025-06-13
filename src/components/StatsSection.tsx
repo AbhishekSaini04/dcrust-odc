@@ -1,6 +1,6 @@
 "use client"
 
-import type React from "react"
+import React from "react"
 import { useState, useEffect, useRef } from "react"
 import "../styles/StatsSection.css"
 
@@ -92,7 +92,7 @@ const DevelopersSection: React.FC = () => {
           setIsVisible(true)
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     )
 
     if (elementRef.current) {
@@ -105,7 +105,7 @@ const DevelopersSection: React.FC = () => {
   return (
     <div ref={elementRef} className={`developers-section ${isVisible ? "animate-in" : ""}`}>
       <div className="avatars-container">
-        {avatars.map((avatar, index) => (
+        {avatars.slice(0, 4).map((avatar, index) => (
           <div
             key={index}
             className="avatar"
@@ -128,14 +128,11 @@ const DevelopersSection: React.FC = () => {
 const StatsSection: React.FC = () => {
   return (
     <div className="stats-container">
-      {/* Stats Section */}
       <div className="stats-section">
         <StatItem value={5} suffix="k+" label="commits" delay={0} />
-        <StatItem value={300} suffix="+" label="pull requests" delay={200} />
-        <StatItem value={1000} suffix="+" label="members" delay={400} />
+        <StatItem value={300} suffix="+" label="pull requests" delay={100} />
+        <StatItem value={1000} suffix="+" label="members" delay={200} />
       </div>
-
-      {/* Developers Section */}
       <DevelopersSection />
     </div>
   )
