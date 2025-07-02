@@ -57,7 +57,7 @@
 }
 
 .about-description {
-  color: #959eac;
+  color: var(--text-light-gray);
   font-size: 1.3rem;
   line-height: 1.8;
   font-family: "League Spartan", sans-serif;

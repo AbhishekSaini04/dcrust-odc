@@ -1,10 +1,12 @@
 .faq-section {
   padding: 64px 16px;
   position: relative;
+  background-color: var(--bg-primary);
+
 }
 
 .faq-wrapper {
-  max-width: 1024px;
+  max-width: 800px;
   margin: 0 auto;
   position: relative;
   z-index: 10;
@@ -16,9 +18,10 @@
 }
 
 .faq-title {
-  font-size: clamp(32px, 4vw, 48px);
+  /* font-size: clamp(32px, 4vw, 48px); */
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .faq-title span.highlight {
@@ -30,7 +33,7 @@
 }
 
 .faq-description {
-  font-size: 18px;
+  font-size: 10px;
   color: #b0b0b0;
   line-height: 1.6;
 }

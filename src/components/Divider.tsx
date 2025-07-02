@@ -4,7 +4,8 @@ export default function Divider() {
       style={{
         width: "100%",
         height: "1px",
-        backgroundColor: "rgba(255, 255, 255, 0.2)",
+        backgroundColor: " rgba(255, 255, 255, 0.032);",
+        transform: "scaleY(0.5)"
       }}
     ></div>
   );

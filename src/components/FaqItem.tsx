@@ -40,7 +40,7 @@ const FaqItem = ({
       </button>
       {isOpen && (
         <div className="faq-content">
-          <div className="faq-divider"></div>
+          {/* <div className="faq-divider"></div> */}
           <p className="faq-answer">{faq.answer}</p>
         </div>
       )}

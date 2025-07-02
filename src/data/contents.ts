@@ -24,11 +24,7 @@ const faqData = [
     answer:
       "We encourage all members to contribute to our open-source projects. Whether you're fixing bugs, adding features, or improving documentation, every contribution is valued and recognized.",
   },
-  {
-    question: "How do I get help with coding problems?",
-    answer:
-      "You can ask questions in our Discord server, post in our forums, or bring your problems to our weekly help sessions. Our experienced members are always ready to help and mentor newcomers.",
-  },
+ 
 ];
 const teamsByYear = {
   2024: [

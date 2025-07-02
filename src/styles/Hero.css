@@ -8,6 +8,8 @@ height: 100vh;
   align-items: center;
   padding-top: 11%; /* Space for fixed navbar */
   overflow: hidden; /* For animations */
+  /* background-color: var(--primary-bg); */
+  background-color: var(--bg-primary);
 }
 
 /* Content alignment - Left side */
