@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import contents from "../data/contents";
 const faqData = contents.faqData;
@@ -17,6 +18,11 @@ export default function FaQSection() {
   return (
     <>
       <section className="faq-section">
+        <div className="faq-bg-blur">
+          <div className="faq-bg-blur-spot spot1"></div>
+          <div className="faq-bg-blur-spot spot2"></div>
+          <div className="faq-bg-blur-spot spot3"></div>
+        </div>
         <AnimatedDots />
         <div className="faq-wrapper">
           <div className="faq-header">

@@ -2,7 +2,11 @@
   padding: 64px 16px;
   position: relative;
   background-color: var(--bg-primary);
-
+  /* background-image: url('https://i.pinimg.com/736x/d3/23/92/d323924ec27b7951aac20cfff058c8f6.jpg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
 
 .faq-wrapper {
@@ -22,6 +26,8 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 24px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 1.6px;
 }
 
 .faq-title span.highlight {
@@ -40,4 +46,63 @@
 
 .faq-items {
   width: 100%;
+}
+
+.faq-bg-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.faq-bg-blur-spot {
+  position: absolute;
+  border-radius: 40%;
+  background: white;
+  opacity: 0.18;
+  filter: blur(43px);
+}
+
+.faq-bg-blur-spot.spot1 {
+  width: 180px;
+  height: 180px;
+  top: 10%;
+  left: 10%;
+  animation: amoeba1 12s ease-in-out infinite alternate;
+}
+.faq-bg-blur-spot.spot2 {
+  width: 120px;
+  height: 120px;
+  top: 60%;
+  left: 40%;
+  animation: amoeba2 14s ease-in-out infinite alternate;
+}
+.faq-bg-blur-spot.spot3 {
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  left: 80%;
+  animation: amoeba3 6s ease-in-out infinite alternate;
+}
+
+@keyframes amoeba1 {
+  0% { transform: translate(0, 0) scale(1, 1); }
+  30% { transform: translate(20px, -10px) scale(1.1, 0.9); }
+  60% { transform: translate(-10px, 20px) scale(0.95, 1.05); }
+  100% { transform: translate(10px, 10px) scale(1.05, 1); }
+}
+@keyframes amoeba2 {
+  0% { transform: translate(0, 0) scale(1, 1); }
+  25% { transform: translate(-15px, 10px) scale(1.08, 0.92); }
+  55% { transform: translate(10px, -20px) scale(0.92, 1.08); }
+  100% { transform: translate(-10px, 10px) scale(1, 1.05); }
+}
+@keyframes amoeba3 {
+  0% { transform: translate(0, 0) scale(1, 1); }
+  40% { transform: translate(15px, 15px) scale(1.12, 0.88); }
+  70% { transform: translate(-10px, -10px) scale(0.9, 1.1); }
+  100% { transform: translate(10px, 0px) scale(1.05, 1); }
 }
