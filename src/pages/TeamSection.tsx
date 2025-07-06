@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 // Hardcoded team members data organized by year
@@ -16,17 +17,16 @@ export default function TeamSection() {
     .sort((a, b) => b - a);
 
   return (
-    <div className="team-section">
-      <section>
-        <div className="team-container">
+    <div className="team-section" style={{ position: 'relative', overflow: 'hidden' }}>
+      <section style={{ position: 'relative', zIndex: 1 }}>
+        <div className="team-container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="team-heading">
             <h2>
               <span className="highlight">COMMUNITY</span>{" "}
               <span className="normal">MEMBERS</span>
             </h2>
             <p>
-              Meet our talented community of developers, designers, and
-              innovators who drive our projects forward.
+              Meet our talented community of developers
             </p>
           </div>
 

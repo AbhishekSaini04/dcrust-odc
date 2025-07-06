@@ -1,3 +1,26 @@
+const memberImages = [
+  "/src/assets/images/dcrust-img1.jpg",
+  "/src/assets/images/dcrust-img2.jpg",
+  "/src/assets/images/dcrust-img3.png",
+  "/src/assets/images/team-logo.png",
+  "/src/assets/images/team1-logo.png",
+  "/src/assets/images/about-logo.png",
+  "/src/assets/images/event-logo.png",
+  "/src/assets/images/explore-logo.png",
+  "/src/assets/images/FAQ-logo.png",
+  "/src/assets/images/async-logo.png",
+  "/src/assets/images/odc-logo2.png",
+  "/src/assets/images/redhut-logo.png",
+  "/src/assets/images/home-logo.png",
+];
+
+let imgIdx = 0;
+function getNextImage() {
+  const img = memberImages[imgIdx % memberImages.length];
+  imgIdx++;
+  return img;
+}
+
 const faqData = [
   {
     question: "How do I join the developer community?",
@@ -32,7 +55,7 @@ const teamsByYear = {
       id: 1,
       name: "Sarah Johnson",
       role: "Lead Designer",
-      image: "/placeholder.svg?height=300&width=300",
+      image: getNextImage(),
       isTopMember: true,
       about:
         "Passionate UI/UX designer with 5+ years of experience in creating user-centered digital experiences. Loves minimalist design and accessibility.",
@@ -43,7 +66,7 @@ const teamsByYear = {
       id: 2,
       name: "Michael Chen",
       role: "Frontend Developer",
-      image: "/placeholder.svg?height=300&width=300",
+      image: getNextImage(),
       isTopMember: false,
       about:
         "React specialist and performance optimization enthusiast. Contributes to open-source projects and mentors junior developers.",
@@ -54,7 +77,7 @@ const teamsByYear = {
       id: 3,
       name: "Emily Rodriguez",
       role: "Product Manager",
-      image: "/placeholder.svg?height=300&width=300",
+      image: getNextImage(),
       isTopMember: true,
       about:
         "Strategic product leader with a background in agile methodologies. Bridges the gap between technical teams and business objectives.",
@@ -65,7 +88,7 @@ const teamsByYear = {
       id: 4,
       name: "David Kim",
       role: "Backend Developer",
-      image: "/placeholder.svg?height=300&width=300",
+      image: getNextImage(),
       isTopMember: false,
       about:
         "Full-stack developer specializing in Node.js and cloud architecture. Passionate about scalable systems and clean code practices.",
@@ -78,7 +101,7 @@ const teamsByYear = {
       id: 5,
       name: "Lisa Thompson",
       role: "UX Researcher",
-      image: "/placeholder.svg?height=300&width=300",
+      image: getNextImage(),
       isTopMember: true,
       about:
         "User research expert with a psychology background. Specializes in user testing and behavioral analysis for digital products.",
@@ -89,7 +112,7 @@ const teamsByYear = {
       id: 6,
       name: "James Wilson",
       role: "DevOps Engineer",
-      image: "/placeholder.svg?height=300&width=300",
+      image: getNextImage(),
       isTopMember: false,
       about:
         "Infrastructure automation specialist with expertise in Docker, Kubernetes, and CI/CD pipelines. Ensures reliable deployments.",
@@ -100,7 +123,7 @@ const teamsByYear = {
       id: 7,
       name: "Anna Martinez",
       role: "Data Scientist",
-      image: "/placeholder.svg?height=300&width=300",
+      image: getNextImage(),
       isTopMember: true,
       about:
         "Machine learning engineer with focus on predictive analytics. Transforms complex data into actionable business insights.",
@@ -113,7 +136,7 @@ const teamsByYear = {
       id: 8,
       name: "Robert Taylor",
       role: "Mobile Developer",
-      image: "/placeholder.svg?height=300&width=300",
+      image: getNextImage(),
       isTopMember: false,
       about:
         "Cross-platform mobile developer with expertise in React Native and Flutter. Built apps with millions of downloads.",
@@ -124,7 +147,7 @@ const teamsByYear = {
       id: 9,
       name: "Sophie Anderson",
       role: "Security Engineer",
-      image: "/placeholder.svg?height=300&width=300",
+      image: getNextImage(),
       isTopMember: true,
       about:
         "Cybersecurity specialist focused on application security and penetration testing. Keeps our systems safe and secure.",
@@ -137,7 +160,7 @@ const teamsByYear = {
       id: 10,
       name: "Alex Thompson",
       role: "Founding Member",
-      image: "/placeholder.svg?height=300&width=300",
+      image: getNextImage(),
       isTopMember: true,
       about:
         "Visionary founder who started this community with a dream to connect developers worldwide. Still actively mentoring new members.",
@@ -148,7 +171,7 @@ const teamsByYear = {
       id: 11,
       name: "Maria Garcia",
       role: "Community Manager",
-      image: "/placeholder.svg?height=300&width=300",
+      image: getNextImage(),
       isTopMember: true,
       about:
         "Heart of our community who organized the first meetups and built the foundation of our inclusive culture.",

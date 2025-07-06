@@ -12,26 +12,28 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-gray-900">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <Divider />
-              <ActiveContributions/>
-              <About/>
-              <TeamSection />
-              <Divider />
-              <FaQSection />
-              <Footer />
-            </>
-          } />
-          <Route path="/contact" element={<Contact/>}></Route>
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="px-40">
+      <BrowserRouter>
+        <div className="min-h-screen bg-gray-900">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Hero />
+                <Divider />
+                <ActiveContributions/>
+                <About/>
+                <TeamSection />
+                <Divider />
+                <FaQSection />
+                <Footer />
+              </>
+            } />
+            <Route path="/contact" element={<Contact/>}></Route>
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </div>
   );
 }
 
