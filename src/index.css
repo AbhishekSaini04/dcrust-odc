@@ -7,27 +7,30 @@
 
 :root {
   /* Primary Colors */
-  --primary-pink: #ff6b9d;
-  --primary-gradient-start: #ff6b9d;
-  --primary-gradient-end: #c44569;
-  --primary-gradient-start-rgb: 255, 107, 157;
-  --primary-gradient-end-rgb: 196, 69, 105;
-  
-  /* Background Colors */
-  --bg-primary: #0a0a0a;
- 
+  --primary-accent: #e2e8f0; /* light gray, matches the image */
+  --primary-gradient-start: #e2e8f0;
+  --primary-gradient-end: #ffffff;
+  /* --primary-gradient-start-rgb: 200, 200, 200; */
+  --primary-gradient-start-rgb: 120, 120, 120;
 
-  
+
+  --primary-gradient-end-rgb: 255, 255, 255;
+
+  /* Background Colors */
+  /* --bg-primary: #0a0a0ac0; */
+  /* Background Colors */
+  --bg-primary: #07071595;
+
   /* Text Colors */
   --text-white: #ffffff;
   --text-gray: #959eac;
   --text-light-gray: #b0b0b0;
   --text-dark: #333333;
-  
+
   /* Border Colors */
   --border-light: rgba(255, 255, 255, 0.1);
   --border-medium: rgba(255, 255, 255, 0.3);
-  
+
   /* Shadow Colors */
   --shadow-dark: rgba(0, 0, 0, 0.3);
   --shadow-light: rgba(255, 255, 255, 0.1);

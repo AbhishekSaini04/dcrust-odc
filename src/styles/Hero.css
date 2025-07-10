@@ -2,15 +2,16 @@
 .hero-container {
   position: relative;
   /* min-height: 100vh; */
-height: auto;
+/* height: auto; */
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0px 40px;
+  padding: 60px 40px;
   padding-top: 11%; /* Space for fixed navbar */
   overflow: hidden; /* For animations */
   /* background-color: var(--primary-bg); */
   background-color: var(--bg-primary);
+  
   
 }
 
@@ -34,7 +35,12 @@ height: auto;
   
   /* Modern tech gradient */
    /* background: linear-gradient(135deg, #ff6b9d, #c44569); */
-     background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+   background: linear-gradient(
+    to bottom,
+    rgb(var(--primary-gradient-start-rgb)),
+    rgb(var(--primary-gradient-end-rgb))
+  );
+  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -55,18 +61,18 @@ height: auto;
   top: -10px;
   right: -20px;
   font-size: 1.6em;
-  color: #00ff88;
+  color: #7c8781;
   opacity: 0.5;
   animation: floatTechSymbol 3s ease-in-out infinite;
 }
 
 .hero-title::after {
-  content: '{ }';
+  content: '{}';
   position: absolute;
   bottom: -10px;
   left: -20px;
   font-size: 1.6em;
-  color: #ff00ff;
+  color: #878187;
   opacity: 0.5;
   animation: floatTechSymbol 3s ease-in-out infinite reverse;
 }
@@ -76,10 +82,11 @@ height: auto;
   font-size: 1.6rem; 
   font-weight: 400; 
   font-family: "League Spartan", sans-serif;
+
   line-height: 1.2;
   color: #ffffff; 
   letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.3rem; */
 }
 
 /* Actions Section */
@@ -89,7 +96,7 @@ height: auto;
   align-items: flex-start;
   gap: 0rem;
   animation: fadeInUp 1s ease-out 0.6s both;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 .hero-tagline {
@@ -104,8 +111,8 @@ height: auto;
 .hero-description {
   padding-top: 10px;
   /* max-width: 100%; */
-  color: #959eac;
-  width: 130%;
+  color: #e3e6ea;
+  width: 120%;
   font-size: 1.85rem;
   letter-spacing: 0.3px;
   font-family: "League Spartan", sans-serif;
@@ -118,7 +125,7 @@ height: auto;
   display: block;
   margin-top: 0.5rem;
   font-weight: 400;
-  color: #b0b0b0;
+  color: #eaeaea;
 }
 
 /* Enhanced Background elements */
@@ -134,32 +141,31 @@ height: auto;
 }
 
 /* Enhanced floating particles */
+/* Remove decorative dots */
 .hero-container::before {
-  content: '';
+  content: '</code>';
   position: absolute;
-  top: 20%;
-  right: 10%;
-  width: 4px;
-  height: 4px;
-  background: #00ff88;
-  border-radius: 50%;
-  animation: float 3s ease-in-out infinite, techGlow 2s ease-in-out infinite alternate;
-  z-index: 5;
-  box-shadow: 0 0 6px rgba(0, 255, 136, 0.4);
+  bottom: 20%;
+  right: 5%;
+  color: #837b7b;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  opacity: 0.3;
+  animation: floatCode 4s ease-in-out infinite reverse;
+  z-index: 1;
 }
 
 .hero-container::after {
-  content: '';
+  content: '</odc>';
   position: absolute;
-  top: 60%;
-  right: 20%;
-  width: 3px;
-  height: 3px;
-  background: #ff00ff;
-  border-radius: 50%;
-  animation: float 4s ease-in-out infinite reverse, techGlow 2s ease-in-out infinite alternate;
-  z-index: 5;
-  box-shadow: 0 0 6px rgba(255, 0, 255, 0.4);
+  bottom: 80%;
+  right: 10%;
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  font-size: 0.6rem;
+  opacity: 0.3;
+  animation: floatCode 4s ease-in-out infinite reverse;
+  z-index: 1;
 }
 
 /* MOBILE FIRST RESPONSIVE DESIGN */
@@ -309,8 +315,7 @@ height: auto;
   }
 }
 
-/* Large Tablets / Small Laptops (1024px and up) */
-@media (min-width: 1024px) and (max-width: 1279px) {
+/* Large Tablets / Small Laptops (1024px and up) */@media (min-width: 1024px) and (max-width: 1279px) {
   .hero-content {
     padding-left: 16px;
     padding-right: 16px;
@@ -475,10 +480,10 @@ height: auto;
 
 @keyframes techGlow {
   0% { 
-    box-shadow: 0 0 8px currentColor;
+    box-shadow: 0 0 2px currentColor;
   }
   100% { 
-    box-shadow: 0 0 15px currentColor, 0 0 20px currentColor;
+    box-shadow: 0 0 1px currentColor, 0 0 1px currentColor;
   }
 }
 
@@ -526,7 +531,7 @@ height: auto;
     filter: drop-shadow(0 0 5px rgba(0, 245, 255, 0.2));
   }
   to {
-    filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.6)) drop-shadow(0 0 25px rgba(255, 0, 255, 0.3));
+    filter: drop-shadow(0 0 20px rgba(106, 111, 111, 0.6)) drop-shadow(0 0 25px rgba(128, 118, 128, 0.3));
   }
 }
 
@@ -579,11 +584,11 @@ height: auto;
 /* Additional tech elements */
 .hero-content::before {
   /* content: url("../assets/images/odc-logo2.png"); */
-
+  content: '</div>';
   position: absolute;
   top: 10%;
-  right: 2%;
-  color: #00ccff;
+  left: 100%;
+  color: #cfd4d4;
   font-family: 'Courier New', monospace;
   /* font-size: 0.8rem; */
   opacity: 0.3;
@@ -596,7 +601,7 @@ height: auto;
   position: absolute;
   bottom: 20%;
   right: 10%;
-  color: #ff6b6b;
+  color: #ffffff;
   font-family: 'Courier New', monospace;
   font-size: 0.8rem;
   opacity: 0.3;
@@ -632,11 +637,10 @@ height: auto;
 
 .hero-3d-image-container {
   position: absolute;
-  top: 55%;
+  top: 58%;
   right: 2vw;
   transform: translateY(-50%);
-  width: 520px;
-  height: 520px;
+ 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -645,10 +649,10 @@ height: auto;
 }
 
 .hero-3d-image {
-  width: 500px;
+  width: 600px;
   height: 600px;
   max-width: 98vw;
-  max-height: 80vh;
+  max-height: 100vh;
   /* box-shadow: 0 16px 64px 0 rgba(0,0,0,0.32), 0 4px 16px 0 rgba(239,93,168,0.12); */
   background: transparent;
   user-select: none;

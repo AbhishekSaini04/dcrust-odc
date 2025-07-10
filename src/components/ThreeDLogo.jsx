@@ -5,7 +5,7 @@ import * as THREE from "three"
 
 function ThreeDLogoMesh() {
   const meshRef = useRef()
-  const frameRef = useRef()
+  const groupRef = useRef()
   const { pointer } = useThree()
 
   // Mouse tracking refs
@@ -18,7 +18,7 @@ function ThreeDLogoMesh() {
   const texture = useTexture("src/assets/images/odc-3d-without-bg.png")
 
   useFrame((state) => {
-    if (!meshRef.current) return
+    if (!groupRef.current) return
     
     // Auto-rotation on own axis
     autoRotation.current.y += 0.005
@@ -44,40 +44,84 @@ function ThreeDLogoMesh() {
       targetRotation.current.y = autoRotation.current.y
     }
     
-    // Smoothly interpolate mesh rotation
-    meshRef.current.rotation.x += (targetRotation.current.x - meshRef.current.rotation.x) * 0.08
-    meshRef.current.rotation.y += (targetRotation.current.y - meshRef.current.rotation.y) * 0.08
-    
-    // Sync frame rotation with mesh
-    if (frameRef.current) {
-      frameRef.current.rotation.x = meshRef.current.rotation.x
-      frameRef.current.rotation.y = meshRef.current.rotation.y
-    }
+    // Apply rotation to group
+    groupRef.current.rotation.x += (targetRotation.current.x - groupRef.current.rotation.x) * 0.08
+    groupRef.current.rotation.y += (targetRotation.current.y - groupRef.current.rotation.y) * 0.08
   })
 
   return (
     <>
-      {/* Lighting */}
-      <ambientLight intensity={0.7} />
-      <directionalLight position={[2, 4, 5]} intensity={0.7} />
+      {/* Better lighting setup */}
+      <ambientLight intensity={0.4} />
+      <directionalLight position={[3, 3, 5]} intensity={0.8} castShadow />
+      <directionalLight position={[-2, 2, 3]} intensity={0.3} />
+      <pointLight position={[0, 0, 3]} intensity={0.4} />
       
-      {/* 3D Frame (thin box behind the image) */}
-      <mesh ref={frameRef} position={[0, 0, -0.06]} castShadow receiveShadow>
-        <boxGeometry args={[2.5, 2.5, 0.12]} />
-        <meshStandardMaterial color="#222" metalness={0.4} roughness={0.7} />
-      </mesh>
-      
-      {/* 3D Logo Plane */}
-      <mesh ref={meshRef} castShadow receiveShadow>
-        <planeGeometry args={[2.5, 2.5]} />
-        <meshStandardMaterial
-          map={texture}
-          transparent
-          metalness={0.5}
-          roughness={0.4}
-        />
-      </mesh>
+      <group ref={groupRef}>
+        {/* Main logo plane with texture */}
+        <mesh ref={meshRef} castShadow receiveShadow>
+          <planeGeometry args={[2.5, 2.5]} />
+          <meshStandardMaterial
+            map={texture}
+            transparent
+            alphaTest={0.1}
+            side={THREE.DoubleSide}
+          />
+        </mesh>
+        
+        {/* Create 3D depth with multiple layers */}
+        {Array.from({ length: 8 }).map((_, i) => {
+          const depth = -0.02 * (i + 1)
+          const scale = 1 - (i * 0.01)
+          const opacity = 0.8 - (i * 0.1)
+          
+          return (
+            <mesh key={i} position={[0, 0, depth]} scale={[scale, scale, 1]} castShadow>
+              <planeGeometry args={[2.5, 2.5]} />
+              <meshStandardMaterial
+                map={texture}
+                transparent
+                opacity={opacity}
+                alphaTest={0.1}
+                side={THREE.DoubleSide}
+              />
+            </mesh>
+          )
+        })}
+        
+        {/* Back solid layer */}
+        <mesh position={[0, 0, -0.18]} castShadow receiveShadow>
+          <planeGeometry args={[2.5, 2.5]} />
+          <meshStandardMaterial
+            color="#2a2a2a"
+            metalness={0.3}
+            roughness={0.8}
+          />
+        </mesh>
+        
+        {/* Subtle frame border */}
+        <mesh position={[0, 0, -0.2]} castShadow receiveShadow>
+          <ringGeometry args={[1.3, 1.35, 32]} />
+          <meshStandardMaterial
+            color="#404040"
+            metalness={0.6}
+            roughness={0.4}
+          />
+        </mesh>
+        
+        {/* Add subtle edge highlighting */}
+        <mesh position={[0, 0, 0.02]} scale={[1.02, 1.02, 1]}>
+          <planeGeometry args={[2.5, 2.5]} />
+          <meshBasicMaterial
+            color="#ffffff"
+            transparent
+            opacity={0.08}
+            side={THREE.BackSide}
+          />
+        </mesh>
+      </group>
     </>
   )
 }
+
 export default ThreeDLogoMesh

@@ -30,3 +30,48 @@
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
     font-weight: 500;
   }
+
+.primary-btn {
+  /* background: #fff; */
+  background: rgba(255, 255, 255, 0.867);
+  color: #222;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.primary-btn:hover {
+  background: #f3f4f6;
+  color: #111;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.three-d-btn {
+  background: linear-gradient(180deg, #23272f 0%, #111113 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35), 0 1.5px 0 #444 inset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: box-shadow 0.2s, transform 0.15s, background 0.2s;
+  position: relative;
+}
+.three-d-btn:hover {
+  background: linear-gradient(180deg, #2d323c 0%, #18181b 100%);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.45), 0 2px 0 #222 inset;
+  transform: translateY(-3px) scale(1.04);
+}

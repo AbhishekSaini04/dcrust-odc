@@ -1,6 +1,6 @@
 .about-section{
   /* padding: 100px 16px; */
-  padding: 64px 16px;
+  padding: 60px 40px;
 }
 
 .about-section-light {
@@ -18,7 +18,7 @@
   justify-content: center;
   gap: 40px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   /* padding: 40px 0; */
 }
 

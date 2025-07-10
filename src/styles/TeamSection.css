@@ -1,32 +1,41 @@
 .team-section {
   width: 100%;
-  background-color: #0b0b0b;
+  background-color: var(--bg-primary);
   color: white;
 }
 
 .team-section section {
-  padding: 64px 16px;
+  padding: 60px 40px;
   position: relative;
 }
 
 .team-container {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
 }
 
 .team-heading {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 22px;
 }
 
 .team-heading h2 {
   font-size: clamp(32px, 4vw, 48px);
   font-weight: bold;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 .team-heading .highlight {
- color: var(--primary-gradient-start);
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--primary-gradient-start-rgb)),
+    rgb(var(--primary-gradient-end-rgb))
+  );
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
 }
 
 .team-heading .normal {
@@ -34,11 +43,14 @@
 }
 
 .team-heading p {
-  font-size: 18px;
-  color: #b0b0b0;
+  font-size: 20px;
+  
   max-width: 512px;
   margin: 0 auto;
-  line-height: 1.6;
+  /* line-height: 1.6; */
+
+  font-family: "League Spartan", sans-serif;
+  color: #e3e6ea;
 }
 
 .year-tabs-container {
@@ -49,35 +61,207 @@
 
 .year-tabs {
   display: flex;
-  background-color: #121212;
-  border-radius: 8px;
-  padding: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  border-radius: 12px;
+  padding: 8px 18px; /* increased padding for more gap between border and buttons */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  gap: 0.5rem;
+  min-width: 400px;
+  max-width: 90vw;
 }
 
 .year-button {
-  padding: 8px 24px;
+  padding: 6px 10px; /* reduced padding for a more compact look */
   border-radius: 6px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  background-color: transparent;
-  color: #b0b0b0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  /* Ultra smooth transitions with perfect easing */
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              background 0.5s cubic-bezier(0.23, 1, 0.320, 1),
+              color 0.5s cubic-bezier(0.23, 1, 0.320, 1),
+              transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background: transparent;
+
+  color: #fff;
   border: none;
   cursor: pointer;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  position: relative;
+  outline: none;
+  box-shadow: none;
+  margin: 0;
+  min-width: 120px; /* reduced min-width for less button width */
+  text-align: center;
+  letter-spacing: 0.01em;
+  /* Add smooth scaling and backdrop blur for premium feel */
+  backdrop-filter: blur(20px);
+  will-change: transform, background-color, color;
+  overflow: hidden;
+}
+
+/* Ripple effect on click */
+.year-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              height 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.year-button:active::before {
+  width: 120px; /* reduced from 300px for smaller ripple */
+  height: 120px; /* reduced from 300px for smaller ripple */
+  opacity: 1;
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Text should be above ripple */
+.year-button > * {
+  position: relative;
+  z-index: 1;
 }
 
 .year-button.active {
-    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
-  color: white;
+  background: #181818;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  position: relative;
+  transform: translateY(-1px);
+  backdrop-filter: blur(8px);
+  /* Subtle breathing animation */
+  animation: activeBreath 3s ease-in-out infinite;
+  border: 0.5px solid #e3e6ea89; /* subtle border for active tab */
+}
+
+@keyframes activeBreath {
+  0%, 100% {
+    transform: translateY(-1px) scale(1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  }
+  50% {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.year-button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 0;
+  height: 3px;
+  border-radius: 0px;
+  background: linear-gradient(90deg, 
+    rgba(227, 230, 234, 0.3) 0%, 
+    #e3e6ea 50%, 
+    rgba(227, 230, 234, 0.3) 100%);
+  /* Ultra smooth line drawing animation */
+  transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              width 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              left 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+  transform: translateY(0);
+  box-shadow: 0 0 8px rgba(227, 230, 234, 0.2);
+}
+
+.year-button.active::after {
+  width: 40%; /* much shorter */
+  left: 30%; /* center the line */
+  opacity: 1;
+  height: 2px; /* thinner line */
+  background: rgba(227, 230, 234, 0.6); /* 60% opacity */
+  box-shadow: 0 0 2px rgba(227, 230, 234, 0.3);
+  /* Subtle, semi-transparent line */
+}
+
+@keyframes lineGlow {
+  0% {
+    box-shadow: 0 0 12px rgba(227, 230, 234, 0.4),
+                0 0 24px rgba(227, 230, 234, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 16px rgba(227, 230, 234, 0.6),
+                0 0 32px rgba(227, 230, 234, 0.2);
+  }
 }
 
 .year-button:hover:not(.active) {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  /* background: rgba(255, 255, 255, 0.06); */
+  transform: translateY(-0.5px);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+}
+
+/* Hover shimmer effect */
+.year-button:hover:not(.active)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    transparent 100%);
+  animation: shimmer 2s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Extra smooth focus states */
+.year-button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+  outline-offset: 2px;
+  transition: outline 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Smooth press animation */
+.year-button:active {
+  transform: translateY(0px) scale(0.98);
+  transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
+  /* Smooth grid animations */
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Performance optimization */
+.year-button,
+.year-button::after {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  transform-style: preserve-3d;
 }

@@ -1,15 +1,28 @@
 /* Active Contributions Section */
 .active-contributions {
   
-  padding: 60px 0;
+  padding: 60px 60px;
   overflow: hidden;
   position: relative;
   background-color: var(--bg-primary);
+  backdrop-filter: blur(10px);
+  /* Improved 4 - Subtle Blurry Merge Effect */
+
+/* Soft Blurry Merge */
+
+/* Apply on element */
+.element {
+/* Choose any one from above */
+filter: blur(0.3px);
+backdrop-filter: blur(0.8px);
+opacity: 0.95;
+}
 }
 
 .contributions-container {
   max-width: 1200px;
   margin: 0 auto;
+  
   
 }
 
@@ -30,19 +43,7 @@
   line-height: 1.2;
 }
 
-.contributions-title::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  transform: translate(-50%, -50%);
-  animation: titleAura 6s ease-in-out infinite;
-  z-index: -1;
-  border-radius: 50%;
-}
+
 .logos-wrapper {
   width: 100%;
   overflow: hidden;

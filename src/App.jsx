@@ -8,29 +8,39 @@ import ActiveContributions from "./pages/ActiveContribution";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
-// import Footer from "./pages/Footer";
 
 function App() {
   return (
     <div className="px-40">
       <BrowserRouter>
-        <div className="min-h-screen bg-gray-900">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={
-              <>
-                <Hero />
-                <Divider />
-                <ActiveContributions/>
-                <About/>
-                <TeamSection />
-                <Divider />
-                <FaQSection />
-                <Footer />
-              </>
-            } />
-            <Route path="/contact" element={<Contact/>}></Route>
-          </Routes>
+        <div className="min-h-screen w-full relative bg-black">
+          {/* Pearl Mist Background with Top Glow */}
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              background: "radial-gradient(ellipse 60% 70% at 50% 0%, rgb(226, 232, 240), transparent 40%),rgba(10, 10, 10, 0.75)",
+            }}
+          />
+          
+          <Hero />
+          <div className="relative z-10">
+            <Navbar />
+            <Routes>
+              <Route path="/" element={
+                <>
+                  
+                  {/* <Divider /> */}
+                  <ActiveContributions/>
+                  <About/>
+                  <TeamSection />
+                  {/* <Divider /> */}
+                  <FaQSection />
+                  <Footer />
+                </>
+              } />
+              <Route path="/contact" element={<Contact/>} />
+            </Routes>
+          </div>
         </div>
       </BrowserRouter>
     </div>

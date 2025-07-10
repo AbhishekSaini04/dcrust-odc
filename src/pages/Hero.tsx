@@ -8,6 +8,8 @@ import { OrbitControls } from '@react-three/drei';
 import ThreeDLogo from '../components/ThreeDLogo';
 // import ThreeDLogo from '../components/ThreeDLogo';
 import odc3d from '../assets/images/odc-3d-without-bg.png';
+import PrimaryButton from '../components/PrimaryButton';
+import ThreeDButton from '../components/ThreeDButton';
 
 const Hero = () => {
   // 3D image effect state
@@ -101,23 +103,25 @@ const Hero = () => {
          <span className="hero-title"> OPEN SOURCE</span> 
         </div>
         <h3 className="hero-subtitle">
-          COMMUNITY OF 
-          <span className='dcrust'>  DCRUST</span>
+          COMMUNITY OF DCRUST
         </h3>
         <div className="hero-actions">
           <p className="hero-description">
-           For the first time in history, for students of DCRUST contributing to open source are going to have a community altogether.
+           For students of DCRUST contributing to open source are going to have a community altogether.
            <br />
           <span>DCRUST Open-source Developers Community</span>
           </p>
-           <Logo/>
+          <div style={{ display: 'flex', gap: '1rem', margin: '1.2rem 0' }}>
+            <PrimaryButton>Contribute Now<span style={{fontSize:'1.1em'}}>&#8594;</span></PrimaryButton>
+            <ThreeDButton>Watch Demo <span style={{fontSize:'1.1em'}}>&#8594;</span></ThreeDButton>
+          </div>
          <StatsSection/>
         </div>
       </div>
       {/* Background gradient effect */}
       <div className="hero-bg-gradient"></div>
       <Canvas camera={{ position: [0, 0, 5], fov: 40 }} style={{ width: '100%', height: '100%' }}>
-        <ThreeDLogo />
+        {/* <ThreeDLogo /> */}
         <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={1.2} />
       </Canvas>
     </div>

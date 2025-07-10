@@ -129,7 +129,7 @@ const StatsSection: React.FC = () => {
   return (
     <div className="stats-container">
       <div className="stats-section">
-        <StatItem value={5} suffix="k+" label="commits" delay={0} />
+        <StatItem value={5} suffix="K+" label="commits" delay={0} />
         <StatItem value={300} suffix="+" label="pull requests" delay={100} />
         <StatItem value={1000} suffix="+" label="members" delay={200} />
       </div>

@@ -22,8 +22,8 @@ export default function TeamSection() {
         <div className="team-container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="team-heading">
             <h2>
-              <span className="highlight">COMMUNITY</span>{" "}
-              <span className="normal">MEMBERS</span>
+              <span className="highlight">COMMUNITY MEMBER</span>{" "}
+             
             </h2>
             <p>
               Meet our talented community of developers
