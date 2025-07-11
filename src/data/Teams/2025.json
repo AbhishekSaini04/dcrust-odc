@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "username": "Mokshit Bindal",
+        "image": "https://res.cloudinary.com/dvvx6gwwv/image/upload/v1722069817/mokshit_zgwt8w.jpg",
+        "dis": "Living life in beta: Constantly improving, updating, and evolving. 🔄💡",
+        "github": "https://github.com/MokshitBindal",
+        "linkedin": "https://www.linkedin.com/in/mokshit-bindal-5b94aa169?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "post": "Open Source Lead",
+        "isFront": false
+    },
+    {
+        "id": 2,
+        "username": "Divija Arora",
+        "image": "https://res.cloudinary.com/dvvx6gwwv/image/upload/v1722069833/divija_nonarw.jpg",
+        "dis": "I am a tech enthusiast and web aficionado, passionate about coding, innovative projects, and mentoring, with a strong focus on exploring and contributing to the web development and open-source communities.",
+        "github": "https://github.com/Divija-Arora",
+        "linkedin": "https://www.linkedin.com/in/divija-arora-5702b5256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "post": "Operations & Open Source Lead",
+        "isFront": true
+    },
+    {
+        "id": 3,
+        "username": "Shourya Bhardwaj",
+        "image": "https://res.cloudinary.com/dvvx6gwwv/image/upload/v1722069804/shourya_sfylpj.jpg",
+        "dis": "I am an AI/ML enthusiast on an exciting odyssey to harness machine learning for real-world solutions. My journey is driven by innovation, continuous learning, and collaboration with tech communities.",
+        "github": "https://github.com/Shouryabhardwajj",
+        "linkedin": "https://www.linkedin.com/in/shouryabhardwajj/",
+        "post": "Operations & ML Lead",
+        "isFront": true
+    },
+    {
+        "id": 4,
+        "username": "Lakshay Bhatia",
+        "image": "https://res.cloudinary.com/dvvx6gwwv/image/upload/v1722069796/lakshay_vc1cof.jpg",
+        "dis": "Passionate tech enthusiast dedicated to fostering innovation and community engagement.",
+        "github": "https://github.com/Lakshayb143",
+        "linkedin": "https://www.linkedin.com/in/lakshay-bhatia-3b52b8256",
+        "post": "Development Lead",
+        "isFront": true
+    },
+    {
+        "id": 5,
+        "username": "Sagar Mamodia",
+        "image": "https://res.cloudinary.com/dvvx6gwwv/image/upload/v1722069788/sagar_mlot4b.jpg",
+        "dis": "I am a Competitive Programmer and an AI enthusiast who believe in the revolutionary potential of AI.",
+        "github": "https://github.com/sagarmamodia",
+        "linkedin": "https://www.linkedin.com/in/sagarmamodia",
+        "post": "CP Lead",
+        "isFront": false
+    },
+    {
+        "id": 6,
+        "username": "Sukriti Pandit",
+        "image": "https://res.cloudinary.com/dvvx6gwwv/image/upload/v1722069733/sukriti_g3cfr9.jpg",
+        "dis": "Leading our AI/ML/Data Science/ initiatives, my curiosity for data is akin to my adventurous spirit. Communities like this one help me explore, learn, and grow, making open source the legacy where the treasure begins.",
+        "github": "https://github.com/SukritiPandit",
+        "linkedin": "https://www.linkedin.com/in/sukriti-pandit-412707256/",
+        "post": "ML Lead",
+        "isFront": false
+    },
+    {
+        "id": 7,
+        "username": "Pankaj Rana",
+        "image": "https://res.cloudinary.com/dvvx6gwwv/image/upload/v1722071673/pankaj_qyphpi.jpg",
+        "dis": "A problem solver with a patient mind, embracing persistence and consistency over time. Not an expert, but always happy to help and learn along the way.\nAnd a football enthusiast—call me when you’re playing, and I’ll be there to join in!",
+        "github": "#",
+        "linkedin": "#",
+        "post": "CP Lead",
+        "isFront": false
+    },
+    {
+        "id": 8,
+        "username": "Mannu",
+        "image": "https://res.cloudinary.com/dvvx6gwwv/image/upload/v1722072553/mannu_mqcd60.jpg",
+        "dis": "I am an Android developer proficient in Jetpack Compose and Spring Boot, skilled in creating robust mobile applications and backend services. My expertise includes seamless integration of advanced features like location services, NFC, and Bluetooth for innovative projects. Passionate about leveraging cutting-edge technologies to develop user-friendly and efficient solutions.",
+        "github": "https://github.com/mannu1392004",
+        "linkedin": "https://www.linkedin.com/in/mannu-kumar-38a280246/",
+        "post": "Development Lead",
+        "isFront": false
+    }
+]

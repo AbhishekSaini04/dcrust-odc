@@ -28,6 +28,18 @@
   margin-bottom: 24px;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   letter-spacing: 1.6px;
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--primary-gradient-start-rgb)),
+    rgb(var(--primary-gradient-end-rgb))
+  );
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: bold;
 }
 
 .faq-title span.highlight {

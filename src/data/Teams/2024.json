@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "username": "Ajay Thakur",
+      "image": "https://res.cloudinary.com/dqaw0myzk/image/upload/v1694002023/2025/ajay_evp4ry.jpg",
+      "dis": "Helping others while you learn is the best possible way to get the real  experience what you gonna do with your learning. Motivated and excited to learn from and give back to the community.",
+      "github": "https://github.com/ajkumar1205",
+      "linkedin": "https://www.linkedin.com/in/ajkumar1205/",
+      "post": "Development Lead",
+      "isFront": false
+    },
+    {
+      "id": 2,
+      "username": "Aditya Bansal",
+      "image": "https://res.cloudinary.com/dqaw0myzk/image/upload/v1694002025/2025/aditya_na4vyl.jpg",
+      "dis": "I am a competitive programming enthusiast , solving real life inspired problems which requires an insightful logic to every bit of concept entices me more than anything",
+      "github": "https://github.com/AdityaBansal114",
+      "linkedin": "https://www.linkedin.com/in/aditya-bansal-3016a2227/",
+      "post": "Operations & CP Lead",
+      "isFront": true
+    },
+    {
+      "id": 3,
+      "username": "Lakshay Dureja",
+      "image": "https://res.cloudinary.com/dqaw0myzk/image/upload/v1694002024/2025/lakshay_svhe3w.jpg",
+      "dis": "As a Dev Lead, I believe I can make a significant impact by guiding and inspiring a group of like-minded individuals to collaborate on projects that address real-world issues and benefit the community as a whole.",
+      "github": "https://github.com/lakshaydureja",
+      "linkedin": "https://www.linkedin.com/in/lakshaydureja/",
+      "post": "Development Lead",
+      "isFront": false
+    },
+    {
+      "id": 4,
+      "username": "Shambhavi Thakur",
+      "image": "https://res.cloudinary.com/dqaw0myzk/image/upload/v1694002024/2025/shambhavi_hqyucp.png",
+      "dis": "A passionate programmer, with a zeal to learn something new everday, I have worked in the fields of Game development and Frontend Web development and now I'm exploring the fascinating realms of Open Source.",
+      "github": "https://github.com/codingercat",
+      "linkedin": "https://www.linkedin.com/in/shambhavi-thakur1/",
+      "post": "Open Source Lead",
+      "isFront": false
+    },
+    {
+      "id": 5,
+      "username": "Aditi Dahiya",
+      "image": "https://res.cloudinary.com/dqaw0myzk/image/upload/v1694002022/2025/aditi_kim56t.jpg",
+      "dis": "Being an explorer always makes one get to the other side of the Odyssey. Communities like this have helped me learn and grow. Open Source being the legacy, here the treasure begins.",
+      "github": "https://github.com/Aditi-Dahiya",
+      "linkedin": "https://www.linkedin.com/in/aditi-dahiya-4b9424249/",
+      "post": "Operations & ML Lead",
+      "isFront": true
+    },
+    {
+      "id": 6,
+      "username": "Dhruv Khatter",
+      "image": "https://res.cloudinary.com/dqaw0myzk/image/upload/v1694002023/2025/dhruv_oihojl.jpg",
+      "dis": "I am a passionate AI/ML enthusiast and a full-stack developer who possesses a unique blend of skills and interests, combining a deep fascination with artificial intelligence and machine learning with a strong foundation in full-stack web development.",
+      "github": "https://github.com/LearnWithDhruv",
+      "linkedin": "https://www.linkedin.com/in/dhruv-khatter-255459248/",
+      "post": "ML Lead",
+      "isFront": false
+    },
+    {
+      "id": 7,
+      "username": "Dhiraj",
+      "image": "https://res.cloudinary.com/dqaw0myzk/image/upload/v1694002024/2025/dhiraj_kjbcqo.jpg",
+      "dis": "I'm a passionate competitive programmer with a knack for solving complex algorithmic challenges. I'm dedicated to pushing the boundaries of what's possible in the world of coding competitions.",
+      "github": "https://github.com/dhirajmehta720",
+      "linkedin": "https://www.linkedin.com/in/dhiraj-mehta-847105228",
+      "post": "CP Lead",
+      "isFront": false
+    },
+    {
+      "id": 8,
+      "username": "Himanshu",
+      "image": "https://res.cloudinary.com/dqaw0myzk/image/upload/v1694002021/2025/himanshu_fgaj6j.jpg",
+      "dis": "An Open Sorcerer and Web Enthusiast who loves diving in technical communities and helping out newbies. We can also play Chess and talk about cats.",
+      "github": "https://github.com/itshypon",
+      "linkedin": "https://www.linkedin.com/in/hypon/",
+      "post": "Open Source Lead",
+      "isFront": true
+    },
+    {
+      "id": 9,
+      "username": "Mukul Bhardwaj",
+      "image": "https://res.cloudinary.com/dqaw0myzk/image/upload/v1694073912/2025/mukul_ns8xdb.jpg",
+      "dis": "I've learned and gained experience in this field for the past 1 year. Though not a professional, but yes, enough to guide you throughout this journey in this field.",
+      "github": "https://github.com/mb-008",
+      "linkedin": "https://www.linkedin.com/in/mukul-bhardwaj-45473124a/",
+      "post": "Management Lead",
+      "isFront": false
+    },
+    {
+      "id": 10,
+      "username": "Muskan Singhal",
+      "image": "https://res.cloudinary.com/dqaw0myzk/image/upload/v1694073519/2025/muskan_yh4zc4.jpg",
+      "dis": "Responsible for overseeing content creation and strategic management to drive organizational goals.",
+      "github": "https://github.com/muskansinghal26",
+      "linkedin": "https://www.linkedin.com/in/muskan-singhal-4a1115220",
+      "post": "Management Lead",
+      "isFront": false
+    }
+  ]

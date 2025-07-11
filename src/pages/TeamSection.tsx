@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Hardcoded team members data organized by year
 import contents from "../data/contents";
@@ -15,6 +16,10 @@ export default function TeamSection() {
   const availableYears = Object.keys(teamsByYear)
     .map(Number)
     .sort((a, b) => b - a);
+  const navigate = useNavigate();
+
+  // Show only the first 4 members (1 row)
+  const visibleMembers = currentTeam.slice(0, 4);
 
   return (
     <div className="team-section" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -46,11 +51,24 @@ export default function TeamSection() {
             </div>
           </div>
 
-          <div className="team-grid">
-            {currentTeam.map((member) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+            {visibleMembers.map((member) => (
               <MemberCard key={member.id} member={member} />
             ))}
           </div>
+
+          {/* View More Button */}
+          {currentTeam.length > 4 && (
+           <div className="view-btn">
+           <button
+             className="view-more-btn"
+             onClick={() => navigate("/all-members?year=" + selectedYear)}
+           >
+             View More
+           </button>
+         </div>
+         
+          )}
         </div>
       </section>
     </div>

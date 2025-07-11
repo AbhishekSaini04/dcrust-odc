@@ -1,107 +1,185 @@
-.member-card {
-  background-color: #121212;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transform: scale(1);
-}
+/* MemberCard.css */
 
-.member-card.hovered {
-  border: 1px solid var(--primary-gradient-start);
-  transform: scale(1.05);
-}
-
-.member-card-inner {
-  padding: 24px;
-  text-align: center;
-  position: relative;
-}
-
-.top-member-badge {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background-color: #ef5da8;
-  color: white;
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 9999px;
-  font-weight: 500;
-}
-
-.member-image-container {
-  position: relative;
-  width: 128px;
-  height: 128px;
-  margin: 0 auto 16px auto;
-}
-
-/* When using <Image />, give it a class and style it accordingly:
-.member-image {
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid transparent;
-  transition: border-color 0.3s ease;
-}
-.member-image.hovered {
-  border-color: #ef5da8;
-}
-*/
-
-.member-name {
-  font-size: 20px;
-  font-weight: 600;
-  color: white;
-  margin-bottom: 8px;
-}
-
-.member-role {
-  color: #b0b0b0;
-  font-weight: 500;
-  margin-bottom: 12px;
-}
-
-.member-about {
-  color: #b0b0b0;
-  font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  text-align: left;
-}
-
-.social-buttons {
+.member {
+  background-color: #18181b; /* zinc-900 */
+  border-radius: 10px;
+  padding: 10px;
   display: flex;
-  justify-content: center;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 384px; /* max-w-sm */
+  margin: 0 auto;
+  min-height: 500px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.social-button {
+.member:hover {
+  background-color: #23272c; /* gray-800 */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  border: 1px solid white;
+}
+
+.member-image {
+  width: 100%;
+  height: 280px;
+  background-color: #e5e7eb; /* gray-200 */
+  border-radius: 5px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
 }
 
-.linkedin-button {
-  background-color: #0077b5;
-}
-.linkedin-button:hover {
-  background-color: #005885;
-}
-
-.github-button {
-  background-color: #333;
-}
-.github-button:hover {
-  background-color: #24292e;
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.social-icon {
-  color: white;
+.member:hover .member-image img {
+  transform: scale(1.05);
+}
+
+.member-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.member-name {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 700; /* font-bold */
+  color: #ffffff;
+  margin-bottom: 5px;
+  line-height: 1.25;
+}
+
+.member-role {
+  font-size: 0.85rem; /* text-sm */
+  color: #9ca3af; /* gray-400 */
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.member-dis {
+  color: #d1d5db; /* gray-300 */
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.5;
+  margin-bottom: 0px;
+  flex-grow: 1;
+  /* font-family: "League Spartan", sans-serif; */
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/* Social links styling */
+.flex {
+  display: flex;
+}
+
+.gap-3 {
+  gap: 12px;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+.hover\:text-white:hover {
+  color: #ffffff;
+}
+
+.transition-colors {
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+/* Social icon hover effects */
+.member-container a {
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.member-container a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.member-container a svg {
+  transition: transform 0.2s ease;
+}
+
+.member-container a:hover svg {
+  transform: scale(1.1);
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .member {
+    max-width: 100%;
+    margin: 0 16px;
+    padding: 20px;
+    min-height: 450px;
+  }
+  
+  .member-image {
+    height: 240px;
+  }
+  
+  .member-name {
+    font-size: 1.125rem;
+  }
+}
+
+/* Dark theme enhancements */
+.member {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.member:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Loading state for images */
+.member-image img {
+  background-color: #374151; /* gray-700 */
+}
+
+/* Focus states for accessibility */
+.member-container a:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Animation for card entrance */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.member {
+  animation: slideUp 0.6s ease-out;
 }

@@ -41,6 +41,18 @@ opacity: 0.95;
   position: relative;
   letter-spacing: -0.02em;
   line-height: 1.2;
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--primary-gradient-start-rgb)),
+    rgb(var(--primary-gradient-end-rgb))
+  );
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: bold;
 }
 
 
